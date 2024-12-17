@@ -1,0 +1,132 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#home {
+    background: rgba(227, 227, 227, 0.8);
+    padding: 4rem 2rem;
+    animation: slideIn 2s ease-in-out;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#home h1::after {
+    content: attr(data-mirror);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    color: rgba(0, 0, 0, 0.15);
+    transform: scaleY(-1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0.6;
+}
+
+#about {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4rem 2rem;
+    animation: fadeInUp 2s ease-in;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#projects {
+    background: rgba(249, 249, 249, 0.8);
+    padding: 4rem 2rem;
+    animation: fadeInRight 2s ease-in;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
